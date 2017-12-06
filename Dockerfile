@@ -4,7 +4,7 @@ MAINTAINER Battcor <battcor@gmail.com>
 
 RUN apt-get update
 
-RUN apt-get install -y wget unzip gcc
+RUN apt-get install -y wget unzip
 
 RUN wget https://github.com/phalcon/cphalcon/archive/phalcon-v2.0.13.zip && \
     unzip phalcon-v2.0.13.zip && \
@@ -14,3 +14,5 @@ RUN wget https://github.com/phalcon/cphalcon/archive/phalcon-v2.0.13.zip && \
 RUN docker-php-ext-enable phalcon.so
 
 RUN pear install XML_Parser
+
+RUN echo -e "date.timezone=\"Asia/Singapore\"" > /usr/local/etc/php/conf.d/timezone.ini
