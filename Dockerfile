@@ -15,4 +15,4 @@ RUN docker-php-ext-enable phalcon.so
 
 RUN pear install XML_Parser
 
-RUN echo -e "date.timezone=\"Asia/Singapore\"" > /usr/local/etc/php/conf.d/timezone.ini
+RUN echo "date.timezone=\"Asia/Singapore\"" > /usr/local/etc/php/conf.d/timezone.ini
