@@ -4,7 +4,7 @@ MAINTAINER Battcor <battcor@gmail.com>
 
 RUN apt-get update
 
-RUN apt-get install -y wget unzip
+RUN apt-get install -y wget unzip git gcc
 
 RUN git clone -b 2.0.x https://github.com/phalcon/cphalcon.git cphalcon-2.0.x && \
     cd cphalcon-2.0.x/build/ && \
